@@ -19,7 +19,15 @@ namespace Exercises.Level1
         /// </summary>
         public bool CigarParty(int cigars, bool isWeekend)
         {
-            throw new NotImplementedException();
+            if (cigars >= 40 && cigars<=60)
+            {
+                return true;
+            }
+            if (cigars >=40 && isWeekend)
+            {
+                return true;
+            }
+            return false;
         }
 
         /// <summary>
@@ -36,7 +44,31 @@ namespace Exercises.Level1
         /// </summary>
         public int DateFashion(int you, int date)
         {
-            throw new NotImplementedException();
+            if (you <= 2 && date <= 2)
+            {
+                return 0;
+            }
+            if (you <= 2 && date > 2)
+            {
+                return 0;
+            }
+            if (you > 2 && date <= 2)
+            {
+                return 0;
+            }
+            if (you >= 8 && date >= 8)
+            {
+                return 2;
+            }
+            if (you < 8 && date >= 8)
+            {
+                return 2;
+            }
+            if (you >= 8 && date < 8)
+            {
+                return 2;
+            }
+            return 1;
         }
 
         /// <summary>
@@ -51,7 +83,17 @@ namespace Exercises.Level1
         /// </summary>
         public bool SquirrelPlay(int temp, bool isSummer)
         {
-            throw new NotImplementedException();
+            //60 - 90 play
+            //if summer 60 -100
+            if (temp >=60 && temp <=100 && isSummer)
+            {
+                return true;
+            }
+            if(temp >= 60 && temp <= 90)
+            {
+                return true;
+            }
+            return false;
         }
 
         /// <summary>
@@ -67,7 +109,33 @@ namespace Exercises.Level1
         /// </summary>
         public int CaughtSpeeding(int speed, bool isBirthday)
         {
-            throw new NotImplementedException();
+             if (speed <= 65 && isBirthday)
+            {
+                return 0;
+            }
+            if (speed > 65 && speed <= 85 && isBirthday)
+            {
+                return 1;
+            }
+            if (speed > 86 && isBirthday)
+            {
+                return 2;
+            }
+            if (speed <= 60)
+            {
+                return 0;
+            }
+            if (speed > 60 && speed <= 80)
+            {
+                return 1;
+            }
+            if (speed > 81)
+            {
+                return 2;
+            }
+           
+            return 0;
+
         }
 
         /// <summary>
@@ -80,7 +148,12 @@ namespace Exercises.Level1
         /// </summary>
         public int SortaSum(int a, int b)
         {
-            throw new NotImplementedException();
+            int sum = a + b;
+            if (sum >= 10 && sum <= 19)
+            {
+                return 20;
+            }
+            return sum;
         }
 
         /// <summary>
@@ -96,7 +169,27 @@ namespace Exercises.Level1
         /// </summary>
         public string AlarmClock(int day, bool vacation)
         {
-            throw new NotImplementedException();
+            if (day >= 1 && day <= 5 && vacation == false)
+            {
+                return "7:00";
+            }
+            if (day == 6 && day == 0 && vacation == false)
+            {
+                return "10:00";
+            }
+            if (day >= 1 && day <= 5 && vacation == true)
+            {
+                return "10:00";
+            }
+            if (day == 0  && vacation == true)
+            {
+                return "off";
+            }
+            if (day == 6 && vacation == true)
+            {
+                return "off";
+            }
+            return "10:00";
         }
 
         /// <summary>
@@ -110,7 +203,29 @@ namespace Exercises.Level1
         /// </summary>
         public bool Love6(int a, int b)
         {
-            throw new NotImplementedException();
+           if (a == 6)
+            {
+                return true;
+            }
+            if (b == 6)
+            {
+                return true;
+            }
+            if (a + b == 6)
+            {
+                return true;
+            }
+          
+            if (a - b == 6)
+            {
+                return true;
+            }
+            if (a - b == -6)
+            {
+                return true;
+            }
+
+            return false;
         }
 
         /// <summary>
@@ -124,7 +239,19 @@ namespace Exercises.Level1
         /// </summary>
         public bool In1To10(int n, bool outsideMode)
         {
-            throw new NotImplementedException();
+           if (n >= 1 && n <= 10 && outsideMode == false)
+            {
+                return true;
+            }
+           if (n <= 1 && outsideMode == true)
+            {
+                return true;
+            }
+           if (n >= 10 && outsideMode == true)
+            {
+                return true;
+            }
+            return false;
         }
 
         /// <summary>
@@ -137,7 +264,15 @@ namespace Exercises.Level1
         /// </summary>
         public bool SpecialEleven(int n)
         {
-            throw new NotImplementedException();
+            if( n % 11 == 0)
+            {
+                return true;
+            }
+            if (n % 11 == 1)
+            {
+                return true;
+            }
+            return false;
         }
 
         /// <summary>
@@ -150,7 +285,15 @@ namespace Exercises.Level1
         /// </summary>
         public bool More20(int n)
         {
-            throw new NotImplementedException();
+            if (n % 20 == 1)
+            {
+                return true;
+            }
+            if (n % 20 == 2)
+            {
+                return true;
+            }
+            return false;
         }
 
         /// <summary>
@@ -163,7 +306,19 @@ namespace Exercises.Level1
         /// </summary>
         public bool Old35(int n)
         {
-            throw new NotImplementedException();
+            if (n % 3 == 0 && n % 5 == 0)
+            {
+                return false;
+            }
+            if (n % 3 == 0)
+            {
+                return true;
+            }
+            if (n % 5 == 0)
+            {
+                return true;
+            }
+            return false;
         }
 
         /// <summary>
