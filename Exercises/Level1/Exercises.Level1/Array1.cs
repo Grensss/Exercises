@@ -18,7 +18,16 @@ namespace Exercises.Level1
         /// </summary>
         public bool FirstLast6(int[] nums)
         {
-            throw new NotImplementedException();
+            int first = nums[0];
+
+            int lastindex = nums.Length - 1;
+            int last = nums[lastindex];
+
+            if (first == 6 || last == 6)
+            {
+                return true;
+            }
+            return false;
         }
 
         /// <summary>
@@ -31,7 +40,19 @@ namespace Exercises.Level1
         /// </summary>
         public bool SameFirstLast(int[] nums)
         {
-            throw new NotImplementedException();
+            if (nums.Length == 0)
+            {
+                return false;
+            }
+            int first = nums[0];
+            int lastindex = nums.Length - 1;
+            int last = nums[lastindex];
+
+            if (first == last)
+            {
+                return true;
+            }
+            return false;
         }
 
         /// <summary>
@@ -41,7 +62,12 @@ namespace Exercises.Level1
         /// </summary>
         public int[] MakePi()
         {
-            throw new NotImplementedException();
+            int[] array = new int[3];
+            array[0] = 3;
+            array[1] = 1;
+            array[2] = 4;
+
+            return array;
         }
 
         /// <summary>
@@ -54,7 +80,18 @@ namespace Exercises.Level1
         /// </summary>
         public bool CommonEnd(int[] a, int[] b)
         {
-            throw new NotImplementedException();
+            int firsta = a[0];
+            int firstb = b[0];
+            int lastindexa = a.Length - 1;
+            int lasta = a[lastindexa];
+            int lastindexb = b.Length - 1;
+            int lastb = b[lastindexb];
+
+            if (firsta == firstb || lasta == lastb)
+            {
+                return true;
+            }
+            return false;
         }
 
         /// <summary>
@@ -66,8 +103,12 @@ namespace Exercises.Level1
         /// </summary>
         public int Sum3(int[] nums)
         {
-            throw new NotImplementedException();
+            int sum = 0;
+            Array.ForEach(nums, i => sum += i);
+
+            return sum;
         }
+
 
         /// <summary>
         /// Given an array of ints length 3, return an array with the elements "rotated left" so {1, 2,
@@ -78,10 +119,10 @@ namespace Exercises.Level1
         /// rotateLeft3([7, 0, 0]) → [0, 0, 7]
         /// </summary>
         public int[] RotateLeft3(int[] nums)
-        {
-            throw new NotImplementedException();
+        { 
+                return new int[] { nums[1], nums[2], nums[0] };
         }
-
+    
         /// <summary>
         /// Given an array of ints length 3, return an array with the elements "rotated left" so {1, 2,
         /// 3} yields {2, 3, 1}.
@@ -92,7 +133,7 @@ namespace Exercises.Level1
         /// </summary>
         public int[] Reverse3(int[] nums)
         {
-            throw new NotImplementedException();
+            return new int[] { nums[2], nums[1], nums[0] };
         }
 
         /// <summary>
@@ -105,8 +146,19 @@ namespace Exercises.Level1
         /// </summary>
         public int[] MaxEnd3(int[] nums)
         {
-            throw new NotImplementedException();
+            if (nums.Length == 0)
+            {
+                return new int[] {0} ;
+            }
+            int larger = Math.Max(nums[0], nums[2]);
+
+            nums[0] = larger;
+            nums[1] = larger;
+            nums[2] = larger;
+            return nums;
         }
+
+    
 
         /// <summary>
         /// Given an array of ints, return the sum of the first 2 elements in the array. If the array
@@ -119,7 +171,16 @@ namespace Exercises.Level1
         /// </summary>
         public int Sum2(int[] nums)
         {
-            throw new NotImplementedException();
+            if (nums.Length == 0)
+            {
+                return 0;
+            }
+            if(nums.Length == 1)
+            {
+                return nums[0];
+            }
+            int result = nums[0] + nums[1];
+            return result;
         }
 
         /// <summary>
@@ -132,7 +193,7 @@ namespace Exercises.Level1
         /// </summary>
         public int[] MiddleWay(int[] a, int[] b)
         {
-            throw new NotImplementedException();
+            return new int[] { a[1], b[1] };
         }
 
         /// <summary>
@@ -145,7 +206,18 @@ namespace Exercises.Level1
         /// </summary>
         public int[] MakeEnds(int[] nums)
         {
-            throw new NotImplementedException();
+            if (nums.Length == 0)
+            {
+                return new int[] { 0 };
+            }
+            if(nums.Length == 1)
+            {
+                return new int[] { nums[0], nums[0]};
+            }
+            int first = nums[0];
+            int lastindex = nums.Length - 1;
+            int last = nums[lastindex];
+            return new int[] { first, last };
         }
 
         /// <summary>
