@@ -47,7 +47,7 @@ namespace Exercises.Level1
             int first = nums[0];
             int lastindex = nums.Length - 1;
             int last = nums[lastindex];
-
+             
             if (first == last)
             {
                 return true;
